@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #hamburger--menu {
-  @apply relative  w-8 h-8 md:hidden z-20;
+  @apply relative  w-8 h-8 md:hidden z-20 focus:outline-none;
   transition: all 0.25s;
 }
 
@@ -31,4 +31,8 @@
 }
 .open .hamburger--bottom {
   transform: rotate(-45deg) translateY(8px) translateX(-8px);
+}
+
+.tab-open {
+  @apply border-2 border-orange-600 mx-2;
 }
