@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#hamburger--menu {
+  @apply relative  w-8 h-8 md:hidden z-20;
+  transition: all 0.25s;
+}
+
+.hamburger--top,
+.hamburger--middle,
+.hamburger--bottom {
+  @apply absolute h-1 top-0 left-0 w-full bg-black dark:bg-white;
+  transition: all 0.5s;
+}
+.hamburger--middle {
+  transform: translateY(8px);
+}
+.hamburger--bottom {
+  transform: translateY(16px);
+}
+
+.open {
+  transform: translateX(16px);
+}
+.open .hamburger--top {
+  transform: rotate(45deg) translateY(8px) translateX(8px);
+}
+.open .hamburger--middle {
+  display: none;
+}
+.open .hamburger--bottom {
+  transform: rotate(-45deg) translateY(8px) translateX(-8px);
+}

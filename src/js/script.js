@@ -28,3 +28,11 @@ function toggleTheme() {
 }
 
 themeToggleButton.addEventListener("click", toggleTheme);
+
+//Hamburger button functionality
+const hamMenu = document.getElementById("hamburger--menu");
+const menu = document.getElementById("menu");
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("open");
+  menu.classList.toggle("hidden");
+});

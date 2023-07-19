@@ -7,12 +7,12 @@
     <script src="./js/script.js" defer></script>
     <title>Bookmark Manager</title>
   </head>
-  <body class="dark:bg-slate-800 dark:text-white">
+  <body class="dark:bg-slate-900 dark:text-white">
     <!-- The Nav bar -->
     <nav
-      class="mt-8 md:container max-w-lg mx-auto py-8 px-4 flex justify-between items-center border border-red-300"
+      class="md:container max-w-lg mx-auto py-8 px-4 flex justify-between items-center"
     >
-      <div class="flex gap-x-4 items-center">
+      <div class="flex gap-x-4 items-center z-20">
         <img
           src="./images/logo-bookmark.svg"
           alt=""
@@ -21,7 +21,7 @@
         <button
           id="theme-toggle"
           type="button"
-          class="p-2 ring-2 rounded-lg dark:ring-gray-700 ring-gray-300 dark:text-gray-300 text-gray-600"
+          class="p-2 ring-2 rounded-lg dark:ring-gray-700 ring-gray-400 dark:text-gray-300 text-gray-600"
         >
           <svg
             id="theme-toggle-dark-icon"
@@ -53,17 +53,17 @@
       <div class="hidden md:flex gap-x-8 items-center justify-end">
         <a
           href="#features"
-          class="uppercase text-gray-400 dark:text-white dark:hover:text-cyan-300"
+          class="uppercase text-gray-400 dark:text-white dark:hover:text-cyan-400 hover:text-orange-500"
           >Features</a
         >
         <a
           href="#download"
-          class="uppercase text-gray-400 dark:text-white dark:hover:text-cyan-300"
+          class="uppercase text-gray-400 dark:text-white dark:hover:text-cyan-400 hover:text-orange-500"
           >Download</a
         >
         <a
           href="#faq"
-          class="uppercase text-gray-400 dark:text-white dark:hover:text-cyan-300"
+          class="uppercase text-gray-400 dark:text-white dark:hover:text-cyan-400 hover:text-orabge-500"
           >Faq</a
         >
         <button
@@ -72,6 +72,47 @@
           Login
         </button>
       </div>
+      <!-- Hamburger-icon -->
+      <button type="button" id="hamburger--menu">
+        <span class="hamburger--top"></span>
+        <span class="hamburger--middle"></span>
+        <span class="hamburger--bottom"></span>
+      </button>
     </nav>
+    <!-- Hamburger menu container-->
+    <div
+      id="menu"
+      class="hidden absolute top-0 left-0 right-0 bottom-0 dark:bg-gray-600/30 bg-blue-900/20"
+    >
+      <div class="relative container mx-auto">
+        <div
+          class="absolute pt-8 pb-16 flex flex-col top-20 left-0 right-0 gap-y-2 text-center dark:text-white text-black"
+        >
+          <a
+            href="#features"
+            class="uppercase hover:text-red-500/50 dark:hover:text-[#f97316]"
+            >features</a
+          >
+          <div class="border border-gray-400 w-11/12 mx-auto"></div>
+          <a
+            href="#download"
+            class="uppercase hover:text-red-500/50 dark:hover:text-[#f97316]"
+            >download</a
+          >
+          <div class="border border-gray-400 w-11/12 mx-auto"></div>
+          <a
+            href="#faq"
+            class="uppercase hover:text-red-500/50 dark:hover:text-[#f97316]"
+            >faq</a
+          >
+          <div class="border border-gray-400 w-11/12 mx-auto"></div>
+          <a
+            href=""
+            class="uppercase hover:text-red-500/50 dark:hover:text-[#f97316]"
+            >login</a
+          >
+        </div>
+      </div>
+    </div>
   </body>
 </html>
