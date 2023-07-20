@@ -170,8 +170,12 @@
           <div
             class="group flex flex-col gap-y-4 border-b-2 border-b-gray-300 md:border-b-0 text-center items-center justify-center"
           >
-            <div class="group-hover:text-[#f97316] group-hover:cursor-pointer">
-              <a href="#" class="block mb-4">Simple Bookmarkings</a>
+            <div
+              class="group-hover:text-[#f97316] group-hover:cursor-pointer opt"
+              data-key="1"
+            >
+              <!-- opt is a class used to select items in js that respond on a click -->
+              <a class="block mb-4">Simple Bookmarkings</a>
               <div class="tab-open"></div>
             </div>
           </div>
@@ -179,8 +183,11 @@
           <div
             class="group flex flex-col gap-y-4 border-b-2 border-b-gray-300 md:border-b-0 text-center items-center justify-center"
           >
-            <div class="group-hover:text-[#f97316] group-hover:cursor-pointer">
-              <a href="#" class="block mb-4 group:hover:text-[#f97316]"
+            <div
+              class="group-hover:text-[#f97316] group-hover:cursor-pointer opt"
+              data-key="2"
+            >
+              <a class="block mb-4 group:hover:text-[#f97316]"
                 >Speedy Searching</a
               >
               <div></div>
@@ -190,8 +197,11 @@
           <div
             class="group flex flex-col gap-y-4 border-b-2 border-b-gray-300 md:border-b-0 text-center items-center justify-center"
           >
-            <div class="group-hover:text-[#f97316] group-hover:cursor-pointer">
-              <a href="#" class="block mb-4">Easy Sharing</a>
+            <div
+              class="group-hover:text-[#f97316] group-hover:cursor-pointer opt"
+              data-key="3"
+            >
+              <a class="block mb-4">Easy Sharing</a>
               <div></div>
             </div>
           </div>
@@ -199,7 +209,7 @@
       </div>
     </section>
     <!-- Simple bookmark tab -->
-    <section id="simple--bookmark" class="">
+    <section id="simple--bookmark" class="tabs" data-key="1">
       <!-- Container -->
       <div
         class="md:container max-w-lg mx-auto flex flex-col gap-y-12 py-12 px-4 md:flex-row md:gap-x-4 md:justify-center"
@@ -229,7 +239,7 @@
       </div>
     </section>
     <!-- Speedy-searching-section -->
-    <section id="simple--bookmark" class="hidden">
+    <section id="simple--bookmark" class="hidden tabs" data-key="2">
       <!-- Container -->
       <div
         class="md:container max-w-lg mx-auto flex flex-col gap-y-12 py-12 px-4 md:flex-row md:gap-x-8 md:justify-center items-center md:items-start"
@@ -260,7 +270,7 @@
       </div>
     </section>
     <!-- Easy sharing -->
-    <section id="simple--bookmark" class="hidden">
+    <section id="simple--bookmark" class="hidden tabs" data-key="3">
       <!-- Container -->
       <div
         class="md:container max-w-lg mx-auto flex flex-col gap-y-12 py-12 px-4 md:flex-row md:gap-x-8 md:justify-center"
@@ -307,11 +317,11 @@
       <!-- Container -->
       <div class="max-w-5xl mx-auto px-2 py-8">
         <div
-          class="w-full flex flex-col gap-y-6 px-4 py-2 justify-center md:flex-row md:gap-x-6"
+          class="w-full flex flex-col gap-y-6 px-4 py-6 justify-center md:flex-row md:gap-x-6 md:items-start"
         >
           <!-- Chrome Extension  -->
           <div
-            class="flex flex-col gap-y-4 py-2 shadow-xl dark:shadow-gray-800 dark:shadow-md rounded-xl"
+            class="flex flex-col gap-y-4 py-4 shadow-xl dark:shadow-gray-800 dark:shadow-md rounded-xl"
           >
             <div class="mx-auto">
               <img src="./images/logo-chrome.svg" alt="" />
@@ -329,9 +339,9 @@
               Add & Install Extension
             </button>
           </div>
-          <!-- Chrome Extension  -->
+          <!-- Firefox Extension  -->
           <div
-            class="flex flex-col gap-y-4 py-2 shadow-xl dark:shadow-gray-800 dark:shadow-md rounded-xl md:mt-3"
+            class="flex flex-col gap-y-4 py-4 shadow-xl dark:shadow-gray-800 dark:shadow-md rounded-xl md:mt-4"
           >
             <div class="mx-auto">
               <img src="./images/logo-firefox.svg" alt="" />
@@ -349,9 +359,9 @@
               Add & Install Extension
             </button>
           </div>
-          <!-- Chrome Extension  -->
+          <!-- Opera Extension  -->
           <div
-            class="flex flex-col gap-y-4 py-2 shadow-xl dark:shadow-gray-800 dark:shadow-md rounded-xl mt-6"
+            class="flex flex-col gap-y-4 py-4 shadow-xl dark:shadow-gray-800 dark:shadow-md rounded-xl md:mt-8"
           >
             <div class="mx-auto">
               <img src="./images/logo-opera.svg" alt="" />
@@ -368,6 +378,20 @@
             </button>
           </div>
         </div>
+      </div>
+    </section>
+    <!-- FAQ section -->
+    <section id="faq" class="my-20">
+      <div
+        class="md:container max-w-lg mx-auto flex flex-col gap-y-8 items-center text-center"
+      >
+        <h1 class="text-3xl lg:text-4sxl font-bold">
+          Frequently Asked Questions
+        </h1>
+        <p class="max-w-md text-gray-400 text-md leading-5 dark:text-gray-500">
+          Here are some of our FAQs. If you have any other questions you'd like
+          answered please feel free to email us.
+        </p>
       </div>
     </section>
   </body>

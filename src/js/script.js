@@ -36,3 +36,32 @@ hamMenu.addEventListener("click", () => {
   hamMenu.classList.toggle("open");
   menu.classList.toggle("hidden");
 });
+
+//Adding functionality to switch different tabs
+
+const options = document.querySelectorAll(".opt");
+const tabs = document.querySelectorAll(".tabs");
+
+options.forEach((option) => {
+  option.addEventListener("click", () => {
+    showBorder(option);
+    showTab(option.dataset.key);
+  });
+});
+
+function showBorder(option) {
+  options.forEach((option) => {
+    if (option.lastElementChild.classList.contains("tab-open")) {
+      option.lastElementChild.classList.remove("tab-open");
+    }
+  });
+  option.lastElementChild.classList.add("tab-open");
+}
+function showTab(key) {
+  tabs.forEach((tab) => {
+    tab.classList.add("hidden");
+    if (tab.dataset.key === key) {
+      tab.classList.remove("hidden");
+    }
+  });
+}
